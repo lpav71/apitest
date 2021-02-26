@@ -12,7 +12,7 @@ function route($method, $urlData, $formData) {
 
         // Выводим ответ клиенту
         echo json_encode(array(
-            'method' => 'GET',
+            'method' => $method,
             'id' => $goodId,
             'good' => 'phone',
             'price' => 10000
@@ -28,7 +28,7 @@ function route($method, $urlData, $formData) {
 
         // Выводим ответ клиенту
         echo json_encode(array(
-            'method' => 'POST',
+            'method' => $method,
             'id' => rand(1, 100),
             'formData' => $formData
         ));
@@ -46,7 +46,7 @@ function route($method, $urlData, $formData) {
 
         // Выводим ответ клиенту
         echo json_encode(array(
-            'method' => 'PUT',
+            'method' => $method,
             'id' => $goodId,
             'formData' => $formData
         ));
@@ -64,7 +64,7 @@ function route($method, $urlData, $formData) {
 
         // Выводим ответ клиенту
         echo json_encode(array(
-            'method' => 'PATCH',
+            'method' => $method,
             'id' => $goodId,
             'formData' => $formData
         ));
@@ -82,7 +82,7 @@ function route($method, $urlData, $formData) {
 
         // Выводим ответ клиенту
         echo json_encode(array(
-            'method' => 'DELETE',
+            'method' => $method,
             'id' => $goodId
         ));
 
